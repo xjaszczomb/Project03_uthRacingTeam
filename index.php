@@ -26,6 +26,8 @@ session_start();
     <form action="setclock.php" method="POST">
         <input type="number" name="minutes">
         <input type="submit" name="setclock" value="ustaw">
+        <input type="submit" name="stopclock" value="stop">
+        <input type="submit" name="startclock" value="start">
     </form>
 </body>
 </html>
