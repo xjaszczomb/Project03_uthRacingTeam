@@ -7,16 +7,21 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully";
 $time = time();
-$query = "UPDATE `time` SET `time`=$time WHERE `time` IS NOT NULL";
-$query2 = "SELECT * FROM settime";
 
-$conn->query($query);
-$result = $conn->query($query2);
-$row = mysqli_fetch_row($result);
-$timeleft = $row[0]-time();
+$resultSet = $conn->query("SELECT * FROM settime");
+$resultClock = $conn->query("SELECT * FROM  startstop");
+$resultStopDate = $conn->query("SELECT * FROM  stopdate");
 
-if($timeleft>0) echo gmdate("i:s", $timeleft);
-else echo "00:00";
+$stoppedClock = mysqli_fetch_row($resultClock);
+$setTime = mysqli_fetch_row($resultSet);
+$stopDate = mysqli_fetch_row($resultStopDate);
+
+if($stoppedClock[0]) {
+    $timeLeft =  $setTime[0]-$stopDate[0];
+} else $timeLeft = $setTime[0]-time();
+
+if($timeLeft>0) echo gmdate("i:s", $timeLeft);
+    else echo "00:00";
 
 $conn->close();
 ?>
