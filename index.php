@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,21 @@
     <title>UTH Racing Team</title>
 </head>
 <body>
-    test
+    <div id="result">00:00</div>
+
+    <script>
+        const inter = setInterval(Timer,1000);
+        function Timer(){
+            let xmlhttp= new XMLHttpRequest();
+            xmlhttp.open("GET","clock.php",false);
+            xmlhttp.send(null);
+            document.getElementById("result").innerHTML=xmlhttp.responseText;
+        } 
+    </script>
+
+    <form action="setclock.php" method="POST">
+        <input type="number" name="minutes">
+        <input type="submit" name="setclock" value="ustaw">
+    </form>
 </body>
 </html>
