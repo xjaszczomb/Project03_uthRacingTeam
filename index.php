@@ -50,6 +50,17 @@ session_start();
                     <img src="" alt="samochód">
                 </div>
             </section>
+            <section>
+                <header>
+                    <div><hr></div>
+                    <h2>Track Day</h2>
+                    <div>
+                        <div>Motorsport</div>
+                        <div>Konkursy</div>
+                        <div>Trening</div>
+                    </div>
+                </header>
+            </section>
         </article>
         <nav>
             <button>Zaloguj</button>
