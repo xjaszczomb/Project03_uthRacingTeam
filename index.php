@@ -9,7 +9,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UTH Racing Team</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- <div id="result">00:00</div>
@@ -24,45 +24,59 @@ session_start();
         } 
     </script> -->
 
-    <main>
-        <nav>
-            <button>Track Day</button>
+    <main class="flex">
+        <nav class="fixed" data-position="left" data-version="desktop">
+            <button class="">Track Day</button>
             <div>
 
             </div>
             <button>Racing Team</button>
         </nav>
+        <nav class="sm-nav top fixed flex" data-version="mobile">
+            <button class="btn-dark round">Track Day</button>
+            <button class="btn-light round">Zaloguj</button>
+        </nav>
+        <nav class="sm-nav bottom fixed flex" data-version="mobile">
+            <button class="btn-white">Racing Team</button>
+            <button class="btn-white">Sponsorzy</button>
+        </nav>
         <article>
             <section>
                 <div>
-                    <img src="" alt="logo uth racing team">
+                    <img src="img/logo.png" alt="logo uth racing team">
                 </div>
                 <header>
                     <div><hr></div>
-                    <h2>Uth racing team</h2>
-                    <div>
-                        <div>Motoryzacja</div>
-                        <div>Track Days</div>
-                        <div>Zabawa</div>
+                    <div class="title-holder">
+                        <h2 class="title">uth</h2>
+                        <h2 class="title">racing</h2>
+                        <h2 class="title">team</h2>
+                    </div>
+                    <div class="tags flex">
+                        <div class="tag">Motoryzacja</div>
+                        <div class="tag">Track Days</div>
+                        <div class="tag">Zabawa</div>
                     </div>
                 </header>
                 <div>
-                    <img src="" alt="samochód">
+                    <!-- <img src="img/car.png" alt="samochód"> -->
                 </div>
             </section>
             <section>
                 <header>
                     <div><hr></div>
-                    <h2>Track Day</h2>
-                    <div>
-                        <div>Motorsport</div>
-                        <div>Konkursy</div>
-                        <div>Trening</div>
+                    <div class="title-holder">
+                        <h2 class="title">Track Day</h2>
+                    </div>
+                    <div class="tags flex">
+                        <div class="tag">Motorsport</div>
+                        <div class="tag">Konkursy</div>
+                        <div class="tag">Trening</div>
                     </div>
                 </header>
             </section>
         </article>
-        <nav>
+        <nav class="fixed" data-position="right" data-version="desktop">
             <button>Zaloguj</button>
             <div>
                 
