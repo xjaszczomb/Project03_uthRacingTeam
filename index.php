@@ -28,6 +28,23 @@ session_start();
         <input type="submit" name="setclock" value="ustaw">
         <input type="submit" name="stopclock" value="stop">
         <input type="submit" name="startclock" value="start">
+        <input type="submit" name="reset" value="reset">
     </form>
+    <div>
+        <p>Aktualne ustawienie: 
+            <?php
+            require_once "connect.php";
+            $conn = new mysqli($servername, $username, $password, $dbname);
+        
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+            
+            $resultMinutes = $conn->query("SELECT * FROM `minutes` LIMIT 1");
+            $minutes = $resultMinutes->fetch_assoc();
+            echo $minutes['minutes']." min";
+            ?>
+        </p>
+    </div>
 </body>
 </html>
