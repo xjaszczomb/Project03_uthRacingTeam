@@ -12,13 +12,13 @@ $resultSet = $conn->query("SELECT * FROM settime");
 $resultClock = $conn->query("SELECT * FROM  startstop");
 $resultStopDate = $conn->query("SELECT * FROM  stopdate");
 
-$stoppedClock = mysqli_fetch_row($resultClock);
-$setTime = mysqli_fetch_row($resultSet);
-$stopDate = mysqli_fetch_row($resultStopDate);
+$stoppedClock = $resultClock->fetch_assoc();
+$setTime = $resultSet->fetch_assoc();
+$stopDate = $resultStopDate->fetch_assoc();
 
-if($stoppedClock[0]) {
-    $timeLeft =  $setTime[0]-$stopDate[0];
-} else $timeLeft = $setTime[0]-time();
+if($stoppedClock['stopped']) {
+    $timeLeft =  $setTime['time']-$stopDate['time'];
+} else $timeLeft = $setTime['time']-time();
 
 if($timeLeft>0) echo gmdate("i:s", $timeLeft);
     else echo "00:00";
