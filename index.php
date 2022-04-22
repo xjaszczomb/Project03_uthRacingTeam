@@ -13,18 +13,6 @@ session_start();
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
-    <!-- <div id="result">00:00</div>
-
-    <script>
-        const inter = setInterval(Timer,1000);
-        function Timer(){
-            let xmlhttp= new XMLHttpRequest();
-            xmlhttp.open("GET","clock.php",false);
-            xmlhttp.send(null);
-            document.getElementById("result").innerHTML=xmlhttp.responseText;
-        } 
-    </script> -->
-
     <nav class="fixed" data-position="left" data-version="desktop">
         <button class="btn-dark round">Track Day</button>
         <div>
@@ -35,7 +23,7 @@ session_start();
 
     <nav class="sm-nav top sticky flex" data-version="mobile">
         <button class="btn-dark round">Track Day</button>
-        <button class="btn-light round">Zaloguj</button>
+        <a href="login.php"><button class="btn-light round">Zaloguj</button></a>
     </nav>
 
     <nav class="sm-nav bottom fixed flex" data-version="mobile">
@@ -81,36 +69,147 @@ session_start();
                         <div class="tag">Trening</div>
                     </div>
                 </header>
-                <table class="trackday-table">
-                    <thead>
-                        <tr>
-                            <th>Imię</th>
-                            <th>Nazwisko</th>
-                            <th>Auto</th>
-                            <th class="group">Gr.</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Martyna</td>
-                            <td>Jastrzębska</td>
-                            <td>Honda Civic</td>
-                            <td class="group">1</td>
-                        </tr>
-                        <tr>
-                            <td>Artur</td>
-                            <td>Orkwiszewski</td>
-                            <td>Subaru Impreza</td>
-                            <td class="group">1</td>
-                        </tr>
-                        <tr>
-                            <td>abcdefghijklmnopr</td>
-                            <td>SRATATATATAATaaaaaaa</td>
-                            <td>Subaru Imprezaaaaaaaaaaa</td>
-                            <td class="group">1</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="clock-holder flex">
+                    <div class="clock round" id="result">00:00</div>
+                </div>
+                <div class="table-info flex">
+                    <div class="info">
+                        <p>Na torze</p>
+                        <span>Grupa: </span>
+                        <span>Uczestnicy: </span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <button class="dropdown flex">Zwiń
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 4.5L4 1.5L1 4.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="dropdown-content" data-visible="true">
+                    <table class="trackday-table">
+                        <thead>
+                            <tr>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                                <th>Auto</th>
+                                <th class="group">Gr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Martyna</td>
+                                <td>Jastrzębska</td>
+                                <td>Honda Civic</td>
+                                <td class="group">1</td>
+                            </tr>
+                            <tr>
+                                <td>Artur</td>
+                                <td>Orkwiszewski</td>
+                                <td>Subaru Impreza</td>
+                                <td class="group">1</td>
+                            </tr>
+                            <tr>
+                                <td>abcdefghijklmnopr</td>
+                                <td>SRATATATATAATaaaaaaa</td>
+                                <td>Subaru Imprezaaaaaaaaaaa</td>
+                                <td class="group">1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-info flex">
+                    <div class="info">
+                        <p>Oczekuje</p>
+                        <span>Grupa: </span>
+                        <span>Uczestnicy: </span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <button class="dropdown flex">Zwiń
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 4.5L4 1.5L1 4.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="dropdown-content" data-visible="true">
+                    <table class="trackday-table">
+                        <thead>
+                            <tr>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                                <th>Auto</th>
+                                <th class="group">Gr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Martyna</td>
+                                <td>Jastrzębska</td>
+                                <td>Honda Civic</td>
+                                <td class="group">1</td>
+                            </tr>
+                            <tr>
+                                <td>Artur</td>
+                                <td>Orkwiszewski</td>
+                                <td>Subaru Impreza</td>
+                                <td class="group">1</td>
+                            </tr>
+                            <tr>
+                                <td>abcdefghijklmnopr</td>
+                                <td>SRATATATATAATaaaaaaa</td>
+                                <td>Subaru Imprezaaaaaaaaaaa</td>
+                                <td class="group">1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-info flex">
+                    <div class="info">
+                        <p>Uczestnicy</p>
+                        <span>Grupy: </span>
+                        <span>Uczestnicy: </span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <button class="dropdown flex">Zwiń
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 4.5L4 1.5L1 4.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="dropdown-content" data-visible="true">
+                    <table class="trackday-table">
+                        <thead>
+                            <tr>
+                                <th>Imię</th>
+                                <th>Nazwisko</th>
+                                <th>Auto</th>
+                                <th class="group">Gr.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Martyna</td>
+                                <td>Jastrzębska</td>
+                                <td>Honda Civic</td>
+                                <td class="group">1</td>
+                            </tr>
+                            <tr>
+                                <td>Artur</td>
+                                <td>Orkwiszewski</td>
+                                <td>Subaru Impreza</td>
+                                <td class="group">1</td>
+                            </tr>
+                            <tr>
+                                <td>abcdefghijklmnopr</td>
+                                <td>SRATATATATAATaaaaaaa</td>
+                                <td>Subaru Imprezaaaaaaaaaaa</td>
+                                <td class="group">1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
         </article>
     </main>
