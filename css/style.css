@@ -22,12 +22,14 @@ body {
 }
 nav {
     position: relative;
+    z-index: 9999;
 }
-button {
+button, a{
     all: unset;
 }
 section {
     margin: 3em 0;
+    max-width: 17em;
 }
 
 *[data-version="desktop"] {
@@ -87,7 +89,6 @@ article {
     padding: 1em;
 }
 header {
-    max-width: 17em;
     margin: 1em 0;
 }
 hr {
@@ -99,7 +100,7 @@ hr {
     justify-content: center;
 }
 .title-holder {
-    margin: 1em 0;
+    margin: 0.5em 0;
 }
 .logo {
     align-items: center;
@@ -156,7 +157,6 @@ hr {
 }
 .img-xl {
     height: 25em;
-    max-width: 17em;
     overflow: hidden;
 }
 .img-xl img {
@@ -164,12 +164,51 @@ hr {
     width: 100%;
 }
 
+/* dropdown */
+
+.dropdown-content {
+    position: relative;
+    height: auto;
+}
+.dropdown {
+    align-items: center;
+    width: 2.5rem;
+    justify-content: space-between;
+}
+.dropdown svg {
+    transition: 0.5s;
+}
+.dropdown svg path{
+    stroke-width: 1.25;
+}
+
+/* table info */
+
+.table-info {
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0 0 0;
+}
+.info p{
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+.info span, .dropdown {
+    font-size: 0.8rem;
+}
+.info span {
+    padding: 0 0.75em 0 0;
+    line-height: 1;
+}
+
 /* table */
 
 .trackday-table {
     font-size: 0.6rem;
-    max-width: 17em;
     border-collapse: collapse;
+    margin: 1em 0;
 }
 .trackday-table th {
     text-align: left;
@@ -189,12 +228,82 @@ hr {
 }
 
 .trackday-table tr td:first-child {
+    width: 7em;
     max-width: 7em;
 }
 
 .trackday-table tr td:nth-child(2){
+    width: 9em;
     max-width: 9em;
 }
 .trackday-table tr td:nth-child(3) {
+    width: 9em;
     max-width: 9em;
+}
+
+/* clock */
+
+.clock-holder {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.clock {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.25rem;
+    background-color: var(--black);
+    color: white;
+    padding: 0.75em 0;
+    width: 6.5em;
+    margin: 0.5em 0;
+    text-align: center;
+    padding: auto;
+}
+
+/* admin panel */
+
+.clock-settings {
+    height: 100vh;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* form */
+
+input[type=number] {
+    max-width: 100%;
+    margin: 1em 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1em;
+    padding: 0.325em 0.75em;
+}  
+.clock-form {
+    margin: 1em 0;
+}
+.form-items-holder {
+    justify-content: center;
+    width: 15em;
+}
+.form-items {
+    flex-direction: column;
+    width: 100%;
+}
+.form-items p {
+    font-size: 0.75em ;
+}
+.form-btns {
+    justify-content: space-between;
+    width: 100%;
+}
+.form-btn {
+    all: unset;
+    background-color: var(--black);
+    color: white;
+    font-weight: 300;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    border-radius: 5px;
 }
