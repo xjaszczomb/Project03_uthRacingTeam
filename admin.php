@@ -8,43 +8,32 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
+    <title>UTH Racing Team</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
-    <div id="result">00:00</div>
+        <div class="clock-settings flex">
+            <div class="clock-holder flex">
+                <div class="clock round" id="result">00:00</div>
+            </div>
+            <form class="clock-form" action="setclock.php" method="POST">
+                <div class="form-items-holder flex">
+                    <div class="form-items flex">
+                        <div class="form-btns flex">
+                            <input class="form-btn" type="submit" name="setclock" value="ustaw">
+                            <input class="form-btn" type="submit" name="stopclock" value="stop">
+                            <input class="form-btn" type="submit" name="startclock" value="start">
+                            <input class="form-btn" type="submit" name="reset" value="reset">
+                        </div>
+                        <input type="number" name="minutes">
+                        <p>Aktualne ustawienie: <?php require_once "php/currentsettime.php";?></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    
 
-    <script>
-        const inter = setInterval(Timer,1000);
-        function Timer(){
-            let xmlhttp= new XMLHttpRequest();
-            xmlhttp.open("GET","clock.php",false);
-            xmlhttp.send(null);
-            document.getElementById("result").innerHTML=xmlhttp.responseText;
-        } 
-    </script>
-
-    <form action="setclock.php" method="POST">
-        <input type="number" name="minutes">
-        <input type="submit" name="setclock" value="ustaw">
-        <input type="submit" name="stopclock" value="stop">
-        <input type="submit" name="startclock" value="start">
-        <input type="submit" name="reset" value="reset">
-    </form>
-    <div>
-        <p>Aktualne ustawienie: 
-            <?php
-            require_once "connect.php";
-            $conn = new mysqli($servername, $username, $password, $dbname);
-        
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-            
-            $resultMinutes = $conn->query("SELECT * FROM `minutes` LIMIT 1");
-            $minutes = $resultMinutes->fetch_assoc();
-            echo $minutes['minutes']." min";
-            ?>
-        </p>
-    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
