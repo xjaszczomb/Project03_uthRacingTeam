@@ -17,7 +17,7 @@ if(isset($_POST['setclock'])) {
 
         $conn->close();
     }
-    header('Location: index.php');
+    header('Location: admin.php');
 }
 
 if(isset($_POST['reset'])) {
@@ -37,7 +37,7 @@ if(isset($_POST['reset'])) {
     $conn->query("UPDATE `settime` SET `time`=$time WHERE `time` IS NOT NULL");
 
     $conn->close();
-    header('Location: index.php');
+    header('Location: admin.php');
 }
 
 if(isset($_POST['stopclock'])) {
@@ -58,7 +58,7 @@ if(isset($_POST['stopclock'])) {
     }
 
     $conn->close();
-    header('Location: index.php');
+    header('Location: admin.php');
 }
 
 if(isset($_POST['startclock'])) {
@@ -87,6 +87,6 @@ if(isset($_POST['startclock'])) {
 
     }
     $conn->close();
-    header('Location: index.php');
+    header('Location: admin.php');
 }
 ?>
