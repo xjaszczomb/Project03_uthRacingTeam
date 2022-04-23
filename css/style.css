@@ -56,6 +56,9 @@ section {
 .round {
     border-radius: 2em;
 }
+.end {
+    justify-content: flex-end !important;
+}
 
 /* navbar */
 
@@ -265,6 +268,18 @@ hr {
     width: 9em;
     max-width: 9em;
 }
+.trackday-table tr td:nth-child(5) {
+    width: 3em;
+    max-width: 3em;
+    padding: 0;
+}
+.trackday-table tr td .img {
+    justify-content: center;
+    align-items: center;
+}
+.trackday-table img {
+    width: 1.25em;
+}
 
 /* clock */
 
@@ -287,7 +302,7 @@ hr {
 
 /* admin panel */
 
-.clock-settings {
+.window-center {
     height: 100vh;
     width: auto;
     align-items: center;
@@ -297,13 +312,13 @@ hr {
 
 /* form */
 
-input[type=number] {
+input[type=number], input[type="text"] {
     max-width: 100%;
-    margin: 1em 0;
+    margin: 0.25em 0;
+    padding: 0.5em 0.75em;
     border-radius: 5px;
     border: 1px solid gray;
     font-size: 1em;
-    padding: 0.325em 0.75em;
 }  
 .clock-form {
     margin: 1em 0;
@@ -319,6 +334,9 @@ input[type=number] {
 .form-items p {
     font-size: 0.75em ;
 }
+.form-btns, .form-items p {
+    margin: 0.5em 0;
+}
 .form-btns {
     justify-content: space-between;
     width: 100%;
@@ -331,4 +349,7 @@ input[type=number] {
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
     border-radius: 5px;
+}
+.form-inputs {
+    flex-direction: column;
 }
