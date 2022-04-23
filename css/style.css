@@ -341,6 +341,9 @@ input[type=number], input[type="text"] {
     justify-content: space-between;
     width: 100%;
 }
+.form-btns[data-typehold=button]{
+    margin-block-start: 1.3em;
+}
 .form-btn {
     all: unset;
     background-color: var(--black);
@@ -352,4 +355,14 @@ input[type=number], input[type="text"] {
 }
 .form-inputs {
     flex-direction: column;
+}
+
+/* Login */
+.login-info {
+    /* margin-block-end: 1em; */
+}
+.login-info p{
+    width: 100%;
+    font-size: 2rem;
+    text-align: right;
 }
