@@ -32,6 +32,25 @@ session_start();
                 </div>
             </form>
         </div>
+        <nav class="nav-admin bottom fixed flex">
+            <div class="nav-admin-list flex">
+                <a href="admin.php">
+                    <div class="nav-admin-item flex round">
+                        <img src="icons/clock.svg" alt="adduser">
+                    </div>
+                </a>
+                <a href="users.php">
+                    <div class="nav-admin-item flex round">
+                        <img src="icons/users.svg" alt="adduser">
+                    </div>
+                </a>
+                <a href="adduser.php">
+                    <div class="nav-admin-item flex round">
+                        <img src="icons/user-plus.svg" alt="adduser">
+                    </div>
+                </a>
+            </div>
+        </nav>
     
 
     <script src="js/script.js"></script>
