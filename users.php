@@ -13,6 +13,54 @@ session_start();
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
+    <main class="main flex">
+        <table class="trackday-table">
+            <thead>
+                <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Auto</th>
+                    <th class="group">Gr.</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Martyna</td>
+                    <td>Jastrzębska</td>
+                    <td>Honda Civic</td>
+                    <td class="group">1</td>
+                    <td>
+                        <div class="img flex">
+                            <img src="icons/x-circle.svg" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Artur</td>
+                    <td>Orkwiszewski</td>
+                    <td>Subaru Impreza</td>
+                    <td class="group">1</td>
+                    <td>
+                        <div class="img flex">
+                            <img src="icons/x-circle.svg" alt="">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>abcdefghijklmnopr</td>
+                    <td>SRATATATATAATaaaaaaa</td>
+                    <td>Subaru Imprezaaaaaaaaaaa</td>
+                    <td class="group">1</td>
+                    <td>
+                        <div class="img flex">
+                            <img src="icons/x-circle.svg" alt="">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
     <nav class="nav-admin bottom fixed flex">
         <div class="nav-admin-list flex">
             <a href="admin.php">
@@ -32,6 +80,5 @@ session_start();
             </a>
         </div>
     </nav>
-    <script src="js/script.js"></script>
 </body>
 </html>
