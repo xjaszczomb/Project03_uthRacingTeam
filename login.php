@@ -1,5 +1,7 @@
 <?php
 session_start();
+if($_SESSION['logged'])
+header('Location: admin.php');
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +19,7 @@ session_start();
         <a href="index.php"><button class="btn-light round">Powrót</button></a>
     </nav>
     <main class="window-center flex">
-        <form action="" method="POST">
+        <form action="php/logincheck.php" method="POST">
             <div class="form-items-holder flex">
                 <div class="form-items flex">
                     <div class="info login-info">
@@ -25,10 +27,10 @@ session_start();
                     </div>
                     <div class="form-inputs flex">
                         <input type="text" name="login" placeholder="Login">
-                        <input type="text" name="password" placeholder="Hasło">
+                        <input type="password" name="password" placeholder="Hasło">
                     </div>
                     <div class="form-btns flex end" data-typehold="button">
-                        <button class="btn-dark round" type="submit" name="adduser">Zaloguj</button>
+                        <button class="btn-dark round" type="submit" name="logging">Zaloguj</button>
                     </div>
                 </div>
             </div>
