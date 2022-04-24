@@ -14,9 +14,10 @@ session_start();
 </head>
 <body>
     <main class="window-center flex">
-        <form action="" method="POST">
+        <form action="php/userset.php" method="POST">
             <div class="form-items-holder flex">
                 <div class="form-items flex">
+                    <p><?php if(isset($_SESSION['alert'])) echo $_SESSION['alert'];?></p>
                     <div class="form-inputs flex">
                         <input type="text" name="name" placeholder="Imię">
                         <input type="text" name="lastname" placeholder="Nazwisko">
