@@ -24,13 +24,13 @@ echo "<div class='table-info flex'>
     echo   "</span>
             <span>Uczestnicy: ".$count[0]."</span>
         </div>
-        <div class='dropdown-menu'>
-            <button class='dropdown flex'>Zwiń
-                <svg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path d='M7 4.5L4 1.5L1 4.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
-                </svg>
-            </button>
-        </div>
+        <div class='dropdown-menu'>";
+        // <button class='dropdown flex'>Zwiń
+        //     <svg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        //         <path d='M7 4.5L4 1.5L1 4.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+        //     </svg>
+        // </button>
+echo "</div>
         </div>
         <div class='dropdown-content' data-visible='true'>
         <table class='trackday-table'>
