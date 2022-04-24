@@ -21,7 +21,7 @@ header('Location: index.php');
         </form>
     </nav>
     <main class="main flex">
-        <table class="trackday-table">
+        <table class=" admin-table trackday-table">
             <thead>
                 <tr>
                     <th>Imię</th>
