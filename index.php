@@ -97,24 +97,7 @@ session_start();
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Martyna</td>
-                                <td>Jastrzębska</td>
-                                <td>Honda Civic</td>
-                                <td class="group">1</td>
-                            </tr>
-                            <tr>
-                                <td>Artur</td>
-                                <td>Orkwiszewski</td>
-                                <td>Subaru Impreza</td>
-                                <td class="group">1</td>
-                            </tr>
-                            <tr>
-                                <td>abcdefghijklmnopr</td>
-                                <td>SRATATATATAATaaaaaaa</td>
-                                <td>Subaru Imprezaaaaaaaaaaa</td>
-                                <td class="group">1</td>
-                            </tr>
+                            <?php require_once "php/tableitem.php"; ?>
                         </tbody>
                     </table>
                 </div>
@@ -223,3 +206,5 @@ session_start();
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
