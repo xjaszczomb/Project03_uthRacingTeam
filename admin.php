@@ -31,6 +31,11 @@ session_start();
                 </div>
             </div>
         </form>
+        <?php
+            require_once "php/trackdaystatus.php";
+            if($status['status']) require_once "php/formgroup.php";
+            else require_once "php/turnonoffbutton.php";
+        ?>
     </main>
     <nav class="nav-admin bottom fixed flex">
         <div class="nav-admin-list flex">
