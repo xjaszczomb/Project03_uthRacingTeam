@@ -1,7 +1,9 @@
 <?php
 session_start();
-if($_SESSION['logged'])
-header('Location: admin.php');
+if(isset($_SESSION['logged'])) {
+    if($_SESSION['logged'])
+    header('Location: admin.php');
+}
 ?>
 
 <!DOCTYPE html>
