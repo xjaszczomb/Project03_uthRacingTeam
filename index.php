@@ -13,77 +13,79 @@ session_start();
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
-    <nav class="fixed" data-position="left" data-version="desktop">
-        <button class="btn-dark round">Track Day</button>
-        <div>
+    <div class="grid">
+        <nav class="top sticky" data-position="left" data-version="desktop">
+            <button class="btn-dark round">Track Day</button>
+            <div>
 
-        </div>
-        <button class="btn-white">Racing Team</button>
-    </nav>
-
-    <nav class="sm-nav top sticky flex" data-version="mobile">
-        <button class="btn-dark round">Track Day</button>
-        <a href="login.php"><button class="btn-light round">Zaloguj</button></a>
-    </nav>
-
-    <nav class="sm-nav bottom fixed flex" data-version="mobile">
-        <button class="btn-white">Racing Team</button>
-        <button class="btn-white">Sponsorzy</button>
-    </nav>
-    <main class="flex main">
-        <article>
-            <div class="logo flex">
-                <img src="img/logo.png" alt="logo uth racing team">
             </div>
-            <section>
-                <header>
-                    <div class="line">
-                        <hr>
-                    </div>
-                    <div class="title-holder">
-                        <h2 class="title">uth</h2>
-                        <h2 class="title">racing</h2>
-                        <h2 class="title">team</h2>
-                    </div>
-                    <div class="tags flex">
-                        <div class="tag">Motoryzacja</div>
-                        <div class="tag">Track Days</div>
-                        <div class="tag">Zabawa</div>
-                    </div>
-                </header>
-                <div class="img-xl">
-                    <img src="img/car.png" alt="samochód">
+            <button class="btn-white">Racing Team</button>
+        </nav>
+
+        <nav class="sm-nav top sticky flex" data-version="mobile">
+            <button class="btn-dark round">Track Day</button>
+            <a href="login.php"><button class="btn-light round">Zaloguj</button></a>
+        </nav>
+        <nav class="sm-nav bottom fixed flex" data-version="mobile">
+            <button class="btn-white">Racing Team</button>
+            <button class="btn-white">Sponsorzy</button>
+        </nav>
+        
+        <main class="flex main">
+            <article>
+                <div class="logo flex">
+                    <img src="img/logo.png" alt="logo uth racing team">
                 </div>
-            </section>
-            <section>
-                <header>
-                    <div class="line">
-                        <hr>
+                <section class="flex reverse">
+                    <header>
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="title-holder">
+                            <h2 class="title">uth</h2>
+                            <h2 class="title">racing</h2>
+                            <h2 class="title">team</h2>
+                        </div>
+                        <div class="tags flex">
+                            <div class="tag">Motoryzacja</div>
+                            <div class="tag">Track Days</div>
+                            <div class="tag">Zabawa</div>
+                        </div>
+                    </header>
+                    <div class="main-img img-xl">
+                        <img src="img/car.png" alt="samochód">
                     </div>
-                    <div class="title-holder">
-                        <h2 class="title">Track Day</h2>
-                    </div>
-                    <div class="tags flex">
-                        <div class="tag">Motorsport</div>
-                        <div class="tag">Konkursy</div>
-                        <div class="tag">Trening</div>
-                    </div>
-                </header>
-                <?php 
-                    require_once "php/trackdaystatus.php";
-                    if($status['status']) require_once "php/trackdayon.php";
-                    else require_once "php/trackdayoff.php";;
-                ?>
-            </section>
-        </article>
-    </main>
-    <nav class="fixed" data-position="right" data-version="desktop">
-        <button>Zaloguj</button>
-        <div>
-            
-        </div>
-        <button>Sponsorzy</button>
-    </nav>
+                </section>
+                <section class="flex">
+                    <header class="header-center">
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="title-holder">
+                            <h2 class="title">Track Day</h2>
+                        </div>
+                        <div class="tags flex">
+                            <div class="tag">Motorsport</div>
+                            <div class="tag">Konkursy</div>
+                            <div class="tag">Trening</div>
+                        </div>
+                    </header>
+                    <?php 
+                        require_once "php/trackdaystatus.php";
+                        if($status['status']) require_once "php/trackdayon.php";
+                        else require_once "php/trackdayoff.php";;
+                    ?>
+                </section>
+            </article>
+        </main>
+        <nav class="top sticky" data-position="right" data-version="desktop">
+            <a href="login.php"><button class="btn-light round">Zaloguj</button></a>
+            <div>
+                
+            </div>
+            <button class="btn-white">Sponsorzy</button>
+        </nav>
+    </div>
     <script src="js/script.js"></script>
     <script src="js/table.js"></script>
 </body>
