@@ -1,0 +1,10 @@
+<div class="track-date">
+    <span>Najbliższy event</span>
+    <p class="date-info">25 kwietnia 2022</p>
+    <p class="place-info">tor słomczyn</p>
+    <p class="other-info">8:00-16:00</p>
+    <p class="other-info">drift</p>
+</div>
+<div class="img-xl">
+    <img src="img/trackday.png" alt="samochód">
+</div>  

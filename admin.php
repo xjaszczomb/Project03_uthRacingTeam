@@ -32,7 +32,7 @@ session_start();
             </div>
         </form>
         <?php
-            require_once "php/trackdaystatus.php";
+            require "php/trackdaystatus.php";
             if($status['status']) require_once "php/formgroup.php";
             else require_once "php/turnonoffbutton.php";
         ?>
