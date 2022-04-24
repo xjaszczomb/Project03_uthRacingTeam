@@ -1,5 +1,5 @@
 <?php
-    require_once "php/trackdaystatus.php";
+    require "php/trackdaystatus.php";
     if($status['status']) echo "<form class='clock-form' action='php/groups.php' method='POST'>
                                     <button type='submit' name='off' class='btn-light round'>Wyłącz</button>
                                 </form>"; 
