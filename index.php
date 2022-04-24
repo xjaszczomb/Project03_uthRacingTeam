@@ -85,6 +85,7 @@ session_start();
         <button>Sponsorzy</button>
     </nav>
     <script src="js/script.js"></script>
+    <script src="js/table.js"></script>
 </body>
 </html>
 
