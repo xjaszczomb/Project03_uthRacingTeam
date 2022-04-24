@@ -3,19 +3,26 @@ session_start();
 
 if(isset($_POST['nextgroup'])) {
     
-    require_once "connect.php";
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    require_once "currentgroups.php";
+    if($currentGroup < $lastGroup) $conn->query("UPDATE groups SET `current`=$currentGroup+1 WHERE `current` IS NOT NULL");
+    else $conn->query("UPDATE groups SET `current`=1 WHERE `current` IS NOT NULL");
 
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $resultMaxGroup = $conn->query("SELECT DISTINCT MAX(`group`) FROM users LIMIT 1");
-    $maxGroup = $resultMaxGroup->fetch_row();
-    echo $maxGroup[0];
+    //echo $maxGroup[0];
     $conn->close();
 
-  //  header('Location: ../admin.php');
+    header('Location: ../admin.php');
+}
+
+if(isset($_POST['prevgroup'])) {
+    
+    require_once "currentgroups.php";
+    if($currentGroup > 1) $conn->query("UPDATE groups SET `current`=$currentGroup-1 WHERE `current` IS NOT NULL");
+    else $conn->query("UPDATE groups SET `current`=$lastGroup WHERE `current` IS NOT NULL");
+
+    //echo $maxGroup[0];
+    $conn->close();
+
+    header('Location: ../admin.php');
 }
 
 
@@ -26,6 +33,7 @@ if(isset($_POST['off'])) {
     if($status['status']) $conn->query("UPDATE statustrackday SET `status`=0 WHERE `status` IS NOT NULL");
     else $conn->query("UPDATE statustrackday SET `status`=1 WHERE `status` IS NOT NULL");
 
+    $conn->query("UPDATE groups SET `current`=1 WHERE `current` IS NOT NULL");
     $conn->close();
     header('Location: ../admin.php');
 }
