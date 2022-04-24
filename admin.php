@@ -1,5 +1,7 @@
 <?php
 session_start();
+if(!$_SESSION['logged'])
+header('Location: index.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +15,11 @@ session_start();
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
+    <nav class="sm-nav top fixed flex" data-version="mobile">
+        <form action="php/logincheck.php" method="POST">
+            <button class="btn-light round" type="submit" name="logout" >Wyloguj</button>
+        </form>
+    </nav>
     <main class="window-center flex">
         <div class="clock-holder flex">
             <div class="clock round" id="result">00:00</div>
