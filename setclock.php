@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['setclock'])) {
     if($_POST['minutes']!="") {
-        require_once "connect.php";
+        require_once "php/connect.php";
         $conn = new mysqli($servername, $username, $password, $dbname);
 
         if ($conn->connect_error) {
@@ -21,7 +21,7 @@ if(isset($_POST['setclock'])) {
 }
 
 if(isset($_POST['reset'])) {
-    require_once "connect.php";
+    require_once "php/connect.php";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
@@ -41,7 +41,7 @@ if(isset($_POST['reset'])) {
 }
 
 if(isset($_POST['stopclock'])) {
-    require_once "connect.php";
+    require_once "php/connect.php";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
@@ -62,7 +62,7 @@ if(isset($_POST['stopclock'])) {
 }
 
 if(isset($_POST['startclock'])) {
-    require_once "connect.php";
+    require_once "php/connect.php";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
