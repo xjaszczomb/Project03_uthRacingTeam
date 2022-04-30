@@ -17,7 +17,7 @@ $(document).ready(()=> {
 const inter = setInterval(Timer,1000);
     function Timer(){
         let xmlhttp= new XMLHttpRequest();
-        xmlhttp.open("GET","clock.php",false);
+        xmlhttp.open("GET","php/clock.php",false);
         xmlhttp.send(null);
         document.getElementById("result").innerHTML=xmlhttp.responseText;
     }
