@@ -311,6 +311,15 @@ hr {
     stroke-width: 1.25;
 }
 
+@media (min-width: 900px) {
+    .dropdown {
+        width: 3rem;
+    }
+    .dropdown svg path{
+        stroke-width: 1.75;
+    }
+}
+
 /* table info */
 
 .table-info {
@@ -346,6 +355,7 @@ hr {
     font-size: 0.6rem;
     border-collapse: collapse;
     margin: 1em 0;
+    transition: 1s;
 }
 .trackday-table th {
     text-align: left;
@@ -363,43 +373,44 @@ hr {
     text-align: center;
     padding: 0.5em 1em !important;
 }
-
-.trackday-table tr td:first-child {
+.trackday-table tr:nth-child(even) {
+    background-color: #dfdfdf;
+}
+.trackday-table tr td:first-child, .trackday-table th:first-child {
     width: 7em;
     max-width: 7em;
 }
-
-.trackday-table tr td:nth-child(2){
+.trackday-table tr td:nth-child(2), .trackday-table th:nth-child(2) {
     width: 9em;
     max-width: 9em;
 }
-.trackday-table tr td:nth-child(3) {
+.trackday-table tr td:nth-child(3), .trackday-table th:nth-child(3) {
     width: 9em;
     max-width: 9em;
 }
-.trackday-table tr td:nth-child(5) {
+.trackday-table tr td:nth-child(5), .trackday-table th:nth-child(5) {
     width: 3em;
     max-width: 3em;
     padding: 0;
 }
+
 @media (min-width: 900px) {
     .trackday-table {
         font-size: 1rem;
     }
-    .trackday-table tr td:first-child {
+    .trackday-table tr td:first-child, .trackday-table th:first-child {
         width: 10em;
         max-width: 10em;
     }
-    
-    .trackday-table tr td:nth-child(2){
+    .trackday-table tr td:nth-child(2), .trackday-table th:nth-child(2){
         width: 13em;
         max-width: 13em;
     }
-    .trackday-table tr td:nth-child(3) {
+    .trackday-table tr td:nth-child(3), .trackday-table th:nth-child(3) {
         width: 13em;
         max-width: 13em;
     }
-    .trackday-table tr td:nth-child(5) {
+    .trackday-table tr td:nth-child(5), .trackday-table th:nth-child(5) {
         width: 3em;
         max-width: 3em;
         padding: 0;
