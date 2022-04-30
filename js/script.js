@@ -1,18 +1,19 @@
-const dropdownContent= document.querySelector(".dropdown-content");
-
 $(document).ready(()=> {
-    $(".dropdown").click(function(){
-        $(".dropdown-content").animate({
-            height: 'toggle'
-        });
+    $(".dropdown-menu").click(function(){
+        let element = $(this).attr('aria-controls');
+        //console.log(element);
 
-       // $(".dropdown").find("svg").css("transform", "rotate(180deg)")
-    
-        let visible = dropdownContent.getAttribute("data-visible")
-        visible==="true" ? dropdownContent.setAttribute("data-visible",false) : dropdownContent.setAttribute("data-visible",true)
+        $(".dropdown-content").each(function() {
+            if($(this).attr('id')==element) {
+                $(this).animate({
+                    height: 'toggle'
+                });
+                let visible = $(this).attr("data-visible")
+                visible==="true" ? $(this).attr("data-visible",false) : $(this).attr("data-visible",true)
+            }
+        });
     });
 })
-
 
 const inter = setInterval(Timer,1000);
     function Timer(){
