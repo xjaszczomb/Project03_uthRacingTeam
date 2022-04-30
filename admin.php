@@ -24,7 +24,7 @@ header('Location: index.php');
         <div class="clock-holder flex">
             <div class="clock round" id="result">00:00</div>
         </div>
-        <form class="clock-form" action="setclock.php" method="POST">
+        <form class="clock-form" action="php/setclock.php" method="POST">
             <div class="form-items-holder flex">
                 <div class="form-items flex">
                     <div class="form-btns flex">
