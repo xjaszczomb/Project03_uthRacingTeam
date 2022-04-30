@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['setclock'])) {
     if($_POST['minutes']!="") {
-        require_once "php/connect.php";
+        require_once "connect.php";
         $conn = new mysqli($servername, $username, $password, $dbname);
 
         if ($conn->connect_error) {
@@ -17,11 +17,11 @@ if(isset($_POST['setclock'])) {
 
         $conn->close();
     }
-    header('Location: admin.php');
+    header('Location: ../admin.php');
 }
 
 if(isset($_POST['reset'])) {
-    require_once "php/connect.php";
+    require_once "connect.php";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
@@ -37,11 +37,11 @@ if(isset($_POST['reset'])) {
     $conn->query("UPDATE `settime` SET `time`=$time WHERE `time` IS NOT NULL");
 
     $conn->close();
-    header('Location: admin.php');
+    header('Location: ../admin.php');
 }
 
 if(isset($_POST['stopclock'])) {
-    require_once "php/connect.php";
+    require_once "connect.php";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
@@ -58,11 +58,11 @@ if(isset($_POST['stopclock'])) {
     }
 
     $conn->close();
-    header('Location: admin.php');
+    header('Location: ../admin.php');
 }
 
 if(isset($_POST['startclock'])) {
-    require_once "php/connect.php";
+    require_once "connect.php";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
@@ -87,6 +87,6 @@ if(isset($_POST['startclock'])) {
 
     }
     $conn->close();
-    header('Location: admin.php');
+    header('Location: ../admin.php');
 }
 ?>

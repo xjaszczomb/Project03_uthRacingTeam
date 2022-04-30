@@ -10,6 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UTH Racing Team</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
