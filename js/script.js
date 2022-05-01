@@ -15,6 +15,12 @@ $(document).ready(()=> {
     });
 })
 
+$(document).ready(()=> {
+    $(".search").click(function(){
+        $("#dropSearch").toggleClass("show");
+    });
+})
+
 const inter = setInterval(Timer,1000);
     function Timer(){
         let xmlhttp= new XMLHttpRequest();
@@ -22,3 +28,5 @@ const inter = setInterval(Timer,1000);
         xmlhttp.send(null);
         document.getElementById("result").innerHTML=xmlhttp.responseText;
     }
+
+

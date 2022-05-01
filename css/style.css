@@ -292,6 +292,29 @@ hr {
     font-family: 'Orbitron', sans-serif;
 }
 
+/* control content */
+
+.control-content {
+    flex-direction: row;
+    align-items: center;
+    width: 4em;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* search */
+.search {
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+}
+.search svg {
+    width: 1em;
+    height: 100%;
+}
+.search span {
+    display: none;
+}
 
 /* dropdown */
 
@@ -300,6 +323,7 @@ hr {
     height: auto;
 }
 .dropdown {
+    cursor: pointer;
     align-items: center;
     width: 2.5rem;
     justify-content: space-between;
@@ -310,15 +334,41 @@ hr {
 .dropdown svg path{
     stroke-width: 1.25;
 }
+.table-last {
+    width: 3rem;
+}
+.dropdown-search {
+    position: relative;
+}
+.dropdown-search-input {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    right: 0;
+}
+.show {
+    display: block;
+}
 
 @media (min-width: 900px) {
     .dropdown {
         width: 3rem;
     }
-    .dropdown svg path{
+    .dropdown svg path, .search svg path{
         stroke-width: 1.75;
     }
+    .search {
+        width: 5.5rem;
+    }
+    .search span {
+        display: block;
+    }
+    .control-content {
+        width: 10em;
+    }
 }
+
 
 /* table info */
 
