@@ -11,8 +11,8 @@ if(isset($_POST['logging'])) {
         }
         //echo "Connected successfully"
 
-        $login = $_POST['login'];
-        $passwd = $_POST['password'];
+        $login = $conn->real_escape_string($_POST['login']);
+        $passwd = $conn->real_escape_string($_POST['password']);
         
         $check = $conn->query("SELECT * FROM `admin` WHERE `login`='$login' AND `password`='$passwd'");
         $countnums = $check->num_rows;
