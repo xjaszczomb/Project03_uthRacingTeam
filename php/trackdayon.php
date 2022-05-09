@@ -71,7 +71,7 @@
                 </svg>
             </div>
             <div id="dropSearch" class="dropdown-search-input">
-                <input type="text">
+                <input id="search" type="text">
             </div>
         </div>
         <div class="dropdown-menu" aria-controls="last" >
@@ -85,17 +85,5 @@
     </div>
 </div>
 <div id="last" class="dropdown-content" data-visible="true">
-    <table class="trackday-table">
-        <thead>
-            <tr>
-                <th>Imię</th>
-                <th>Nazwisko</th>
-                <th>Auto</th>
-                <th class="group">Gr.</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php require "tableitemlast.php"?>
-        </tbody>
-    </table>
+    <span id="searchresult"></span>
 </div>
