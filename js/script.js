@@ -27,9 +27,17 @@ $(document).ready(()=> {
 // ***** SEARCH BAR
 
 $(document).ready(()=> {
-    $(".search").click(function(){
+    $("#dropSearch").click(function(e){
+      e.stopPropagation();
+    });
+    $(".search").click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
         $("#dropSearch").toggleClass("show");
     });
+    $(document).click(function() {
+      $("#dropSearch").removeClass("show");
+  });
 })
 
 // ***** LIVE SEARCH
