@@ -1,13 +1,22 @@
+// *****  TABLES DROPDOWN
+
 $(document).ready(()=> {
     $(".dropdown-menu").click(function(){
         let element = $(this).attr('aria-controls');
-        //console.log(element);
+
+        // change from "Zwiń" to "Rozwiń" and reverse on the element"
+        $(this).find("span").toggle();
+
+        // rotating icon when click
+        $(this).find("svg").toggleClass("rotate");
 
         $(".dropdown-content").each(function() {
+            // hide/show table when click 
             if($(this).attr('id')==element) {
                 $(this).animate({
                     height: 'toggle'
                 });
+                
                 let visible = $(this).attr("data-visible")
                 visible==="true" ? $(this).attr("data-visible",false) : $(this).attr("data-visible",true)
             }
@@ -15,11 +24,15 @@ $(document).ready(()=> {
     });
 })
 
+// ***** SEARCH BAR
+
 $(document).ready(()=> {
     $(".search").click(function(){
         $("#dropSearch").toggleClass("show");
     });
 })
+
+// ***** LIVE SEARCH
 
 $(document).ready(function(){
     // fetch data from table without reload/refresh page
@@ -47,6 +60,7 @@ $(document).ready(function(){
     });
 });
 
+// ***** CLOCK INTERVAL
 
 const inter = setInterval(Timer,1000);
     function Timer(){

@@ -9,6 +9,7 @@
     <div class='dropdown-menu' aria-controls="first">
         <button class='dropdown flex'>
             <span>Zwiń</span>
+            <span class="none">Rozwiń</span>
             <svg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'>
                 <path d='M7 4.5L4 1.5L1 4.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
             </svg>
@@ -36,6 +37,7 @@
     <div class='dropdown-menu' aria-controls="second">
         <button class='dropdown flex'>
             <span>Zwiń</span>
+            <span class="none">Rozwiń</span>
             <svg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'>
                 <path d='M7 4.5L4 1.5L1 4.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
             </svg>
@@ -77,6 +79,7 @@
         <div class="dropdown-menu" aria-controls="last" >
             <button class="dropdown flex">
                 <span>Zwiń</span>
+                <span class="none">Rozwiń</span>
                 <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 4.5L4 1.5L1 4.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
