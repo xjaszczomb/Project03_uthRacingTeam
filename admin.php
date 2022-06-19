@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!$_SESSION['logged'])
-header('Location: index.php');
+if($_SESSION['logged']) {
+
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +38,9 @@ header('Location: index.php');
                 </div>
             </div>
         </form>
+        <form action="php/logincheck.php" method="POST">
+            <button name="logout" type="submit">wyloguj</button>
+        </form>
         <?php
             require "php/trackdaystatus.php";
             if($status['status']) require_once "php/formgroup.php";
@@ -66,3 +69,8 @@ header('Location: index.php');
     <script src="js/script.js"></script>
 </body>
 </html>
+
+<?php
+}
+else header('Location: index.php');
+?>

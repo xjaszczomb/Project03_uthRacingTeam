@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!$_SESSION['logged'])
-header('Location: index.php');
+if($_SESSION['logged']) {
+
 ?>
 
 <!DOCTYPE html>
@@ -59,3 +59,8 @@ header('Location: index.php');
     </nav>
 </body>
 </html>
+
+<?php
+}
+else header('Location: index.php');
+?>

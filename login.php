@@ -1,9 +1,7 @@
 <?php
 session_start();
-if(isset($_SESSION['logged'])) {
-    if($_SESSION['logged'])
-    header('Location: admin.php');
-}
+if(!$_SESSION['logged']) {
+
 ?>
 
 <!DOCTYPE html>
@@ -27,12 +25,23 @@ if(isset($_SESSION['logged'])) {
                     <div class="info login-info">
                         <p>Logowanie</p>
                     </div>
+                    <?php if(isset($_GET['error'])) { ?>
+                        <div role="alert">
+                            <?=$_GET['error']?>
+                        </div>
+                    <?php } ?>
                     <div class="form-inputs flex">
-                        <input type="text" name="login" placeholder="Login">
-                        <input type="password" name="password" placeholder="Hasło">
+                        <input type="text" 
+                               name="login" 
+                               placeholder="Login">
+                        <input type="password" 
+                               name="password" 
+                               placeholder="Hasło">
                     </div>
                     <div class="form-btns flex end" data-typehold="button">
-                        <button class="btn-dark round" type="submit" name="logging">Zaloguj</button>
+                        <button class="btn-dark round" 
+                                type="submit" 
+                                name="logging">Zaloguj</button>
                     </div>
                 </div>
             </div>
@@ -40,3 +49,8 @@ if(isset($_SESSION['logged'])) {
     </main>
 </body>
 </html>
+
+<?php
+}
+else header('Location: index.php');
+?>
