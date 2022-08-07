@@ -15,7 +15,7 @@ if($_SESSION['logged']) {
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
-    <nav class="sm-nav top fixed flex" data-version="mobile">
+    <nav class="sm-nav top fixed flex">
         <form action="php/logincheck.php" method="POST">
             <button class="btn-light round" type="submit" name="logout" >Wyloguj</button>
         </form>
@@ -38,9 +38,6 @@ if($_SESSION['logged']) {
                 </div>
             </div>
         </form>
-        <form action="php/logincheck.php" method="POST">
-            <button name="logout" type="submit">wyloguj</button>
-        </form>
         <?php
             require "php/trackdaystatus.php";
             if($status['status']) require_once "php/formgroup.php";
@@ -62,6 +59,11 @@ if($_SESSION['logged']) {
             <a href="adduser.php">
                 <div class="nav-admin-item flex round">
                     <img src="icons/user-plus.svg" alt="adduser">
+                </div>
+            </a>
+            <a href="index.php">
+                <div class="nav-admin-item flex round">
+                    <img src="icons/home.svg" alt="adduser">
                 </div>
             </a>
         </div>

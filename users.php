@@ -53,6 +53,11 @@ if(isset($_SESSION['user_login'])) {
                     <img src="icons/user-plus.svg" alt="adduser">
                 </div>
             </a>
+            <a href="index.php">
+                <div class="nav-admin-item flex round">
+                    <img src="icons/home.svg" alt="adduser">
+                </div>
+            </a>
         </div>
     </nav>
 </body>
