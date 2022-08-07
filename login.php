@@ -52,5 +52,5 @@ if(!$_SESSION['logged']) {
 
 <?php
 }
-else header('Location: index.php');
+else header('Location: admin.php');
 ?>
