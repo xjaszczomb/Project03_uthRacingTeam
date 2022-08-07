@@ -19,12 +19,10 @@ if(isset($_POST['adduser'])) {
         $query = $conn->query("INSERT INTO users (`name`, `lastname`, `car`, `group`) VALUES ('$name', '$lastname', '$car', '$group')");
 
         if($query)
-            $_SESSION['alert'] = "Dodano poprawnie";
+            header('Location: ../adduser.php?alertuser=Dodano uczesnika');
         $conn->close();
     }
-    else $_SESSION['alert'] = "Uzupełnij";
-
-    header('Location: ../adduser.php');
+    else header('Location: ../adduser.php?alertuser=Uzupełnij');;
 }
 
 if(isset($_POST['deleteuser'])) {
