@@ -155,7 +155,7 @@ nav[data-version="desktop"] {
     justify-content: center;
 }
 .nav-admin-list {
-    width: 12em;
+    width: 15em;
     padding: 1em;
     justify-content: space-between;
     background-color: #e7e7e7;
@@ -516,7 +516,7 @@ hr {
 
 /* form */
 
-input[type=number], input[type="text"], input[type="password"] {
+input[type=number], input[type="text"], input[type="password"], input[type="time"], input[type="date"], select{
     max-width: 100%;
     margin: 0.25em 0;
     padding: 0.5em 0.75em;
@@ -524,6 +524,7 @@ input[type=number], input[type="text"], input[type="password"] {
     border: 1px solid gray;
     font-size: 1em;
 }  
+
 .clock-form {
     margin: 1em 0;
 }
