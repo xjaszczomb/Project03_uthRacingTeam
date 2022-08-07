@@ -25,6 +25,25 @@ if(isset($_POST['addevent'])) {
         $conn->close();
 
     } else header('Location: ../adduser.php?alertevent=Uzupełnij');
+}
 
+if(isset($_POST['deleteevent'])) {
+    
+    require_once "connect.php";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+    //echo "Connected successfully"
+
+    $id = $_POST['id'];
+    //echo $id;
+
+    $query = $conn->query("DELETE FROM events WHERE id=$id");
+
+    $conn->close();
+
+header('Location: ../users.php');
 }
 ?>

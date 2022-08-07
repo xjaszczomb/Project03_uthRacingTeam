@@ -20,21 +20,40 @@ if(isset($_SESSION['user_login'])) {
             <button class="btn-light round" type="submit" name="logout" >Wyloguj</button>
         </form>
     </nav>
-    <main class="main flex">
-        <table class=" admin-table trackday-table">
-            <thead>
-                <tr>
-                    <th>Imię</th>
-                    <th>Nazwisko</th>
-                    <th>Auto</th>
-                    <th class="group">Gr.</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php require_once "php/tableitemdelete.php";?>
-            </tbody>
-        </table>
+    <main class="main flex column center block-margin">
+            <div class="admin-table-holder flex">
+                <table class="admin-table trackday-table">
+                    <thead>
+                        <tr>
+                            <th>Imię</th>
+                            <th>Nazwisko</th>
+                            <th>Auto</th>
+                            <th class="group">Gr.</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php require_once "php/tableitemdelete.php";?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="admin-table-holder flex"> 
+                <table class="admin-table trackday-table">
+                    <thead>
+                        <tr>
+                            <th>Miejsce</th>
+                            <th>Data</th>
+                            <th>Godz</th>
+                            <th class='group'>Typ</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php require_once "php/tableitemeventdelete.php";?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
     <nav class="nav-admin bottom fixed flex">
         <div class="nav-admin-list flex">
